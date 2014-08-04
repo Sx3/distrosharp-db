@@ -3,12 +3,18 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 31, 2014 at 01:46 PM
+-- Generation Time: Aug 04, 2014 at 06:37 AM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- Database: `d-071-1-v2`
@@ -28,6 +34,23 @@ CREATE TABLE IF NOT EXISTS `abilities` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=12 ;
 
+--
+-- Dumping data for table `abilities`
+--
+
+INSERT INTO `abilities` (`id`, `name`, `label`, `description`) VALUES
+(1, 'do_it', 'Do it', 'This allows user to do it.'),
+(2, 'do_that', 'Do that', 'This allows user to do that.'),
+(3, 'view_items', 'View Items', ''),
+(4, 'add_item', 'Add Item', ''),
+(5, 'view_vendors', 'View Vendors', ''),
+(6, 'add_vendor', 'Add Vendor', ''),
+(7, 'view_new_routes', 'View New Routes', ''),
+(8, 'view_old_routes', 'View Old Routes', ''),
+(9, 'add_route', 'Add Route', ''),
+(10, 'view_purchases', 'View Purchases', ''),
+(11, 'add_purchase', 'Add Purchase', '');
+
 -- --------------------------------------------------------
 
 --
@@ -38,6 +61,14 @@ CREATE TABLE IF NOT EXISTS `migrations` (
   `migration` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `batch` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `migrations`
+--
+
+INSERT INTO `migrations` (`migration`, `batch`) VALUES
+('2014_06_10_091322_setup_dbs', 1),
+('2014_06_12_050746_create_tenant_tables', 1);
 
 -- --------------------------------------------------------
 
@@ -53,6 +84,15 @@ CREATE TABLE IF NOT EXISTS `organizations` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=4 ;
 
+--
+-- Dumping data for table `organizations`
+--
+
+INSERT INTO `organizations` (`id`, `code`, `name`, `is_active`) VALUES
+(1, 'PTG_001', 'Rehansa', 1),
+(2, 'PTG_002', 'Vijitha', 1),
+(3, 'PTG_003', 'Suranga', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -66,6 +106,14 @@ CREATE TABLE IF NOT EXISTS `organization_user` (
   PRIMARY KEY (`organization_id`,`user_id`),
   KEY `organization_user_user_id_foreign` (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `organization_user`
+--
+
+INSERT INTO `organization_user` (`organization_id`, `user_id`, `ability_ids`) VALUES
+(1, 1, '[1,2]'),
+(2, 2, '[2,6]');
 
 -- --------------------------------------------------------
 
@@ -87,6 +135,14 @@ CREATE TABLE IF NOT EXISTS `users` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
 
 --
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `email`, `password`, `name`, `is_sysadmin`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'sandun', 'sandun@thesanmark.com', '$2y$10$.2p4yiu1quLqgcZvS3nQb.HubfBegwn.UBV5D874LKj2Tk8xJVIkm', 'Sandun Dhanushka', 0, NULL, '2014-07-27 23:12:39', '2014-07-27 23:12:39'),
+(2, 'supun', 'supun@thesanmark.com', '$2y$10$ukFuPX8SxcGUkrMFEr3nJe0iCEQrAksKfPU3pUSlRH4r1u.WddqCK', 'Supun Budhajeewa', 0, NULL, '2014-07-27 23:12:39', '2014-07-27 23:12:39');
+
+--
 -- Constraints for dumped tables
 --
 
@@ -96,3 +152,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 ALTER TABLE `organization_user`
   ADD CONSTRAINT `organization_user_organization_id_foreign` FOREIGN KEY (`organization_id`) REFERENCES `organizations` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `organization_user_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
