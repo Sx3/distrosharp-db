@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 06, 2014 at 08:26 AM
+-- Generation Time: Aug 06, 2014 at 11:39 AM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.11
 
@@ -46,7 +46,7 @@ INSERT INTO `abilities` (`id`, `name`, `label`, `description`) VALUES
 (11, 'add_purchase', 'Add Purchase', ''),
 (12, 'add_customer', 'Add Customer', ''),
 (13, 'add_bank', 'Add Bank', ''),
-(14, 'view_route', 'View Route', ''),
+(14, 'view_routes', 'View Routes', ''),
 (15, 'view_customers', 'View Customers', ''),
 (16, 'view_banks', 'View Banks', '');
 
