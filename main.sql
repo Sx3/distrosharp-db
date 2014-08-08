@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 08, 2014 at 04:20 AM
+-- Generation Time: Aug 08, 2014 at 05:35 AM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.11
 
@@ -57,3 +57,25 @@ INSERT INTO `abilities` (`id`, `name`, `label`, `description`) VALUES
 (22, 'edit_user', 'Edit User', ''),
 (23, 'edit_vendor', 'Edit Vendor', ''),
 (24, 'edit_route', 'Edit Route', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `stock_types`
+--
+
+CREATE TABLE IF NOT EXISTS `stock_types` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `label` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `description` mediumtext COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `stock_types`
+--
+
+INSERT INTO `stock_types` (`id`, `name`, `label`, `description`) VALUES
+(1, 'normal', 'Normal', ''),
+(2, 'can_accept_returns', 'Can accept returns', '');
