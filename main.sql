@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 02, 2014 at 10:48 AM
+-- Generation Time: Sep 02, 2014 at 11:31 AM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.11
 
@@ -93,3 +93,25 @@ CREATE TABLE IF NOT EXISTS `stock_types` (
 INSERT INTO `stock_types` (`id`, `name`, `label`, `description`) VALUES
 (1, 'normal', 'Normal', ''),
 (2, 'can_accept_returns', 'Can accept returns', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `system_settables`
+--
+
+CREATE TABLE IF NOT EXISTS `system_settables` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `label` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `description` mediumtext COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `system_settables`
+--
+
+INSERT INTO `system_settables` (`id`, `name`, `label`, `description`) VALUES
+(1, 'payment_source_cash', 'Cash Payment Source', ''),
+(2, 'payment_source_cheque', 'Cheque Payment Source', '');
