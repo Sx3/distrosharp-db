@@ -70,7 +70,9 @@ INSERT INTO `abilities` (`id`, `name`, `label`, `description`) VALUES
 (35, 'view_finance_accounts', 'View Finance accounts', ''),
 (36, 'edit_finance_account', 'Edit finance account', ''),
 (37, 'add_finance_transfer', 'Add Finance transfer', ''),
-(38, 'edit_system_settings', 'Edit System Settings', '');
+(38, 'view_finance_transfers_details', 'View finance transfers details', ''),
+(39, 'edit_finance_transfer_details', 'Edit finance transfer details', ''),
+(40, 'edit_system_settings', 'Edit System Settings', '');
 
 -- --------------------------------------------------------
 
