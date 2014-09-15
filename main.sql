@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 15, 2014 at 08:04 AM
+-- Generation Time: Sep 15, 2014 at 11:27 AM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.11
 
@@ -113,7 +113,7 @@ CREATE TABLE IF NOT EXISTS `system_settables` (
   `label` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `description` mediumtext COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=5 ;
 
 --
 -- Dumping data for table `system_settables`
@@ -122,4 +122,5 @@ CREATE TABLE IF NOT EXISTS `system_settables` (
 INSERT INTO `system_settables` (`id`, `name`, `label`, `description`) VALUES
 (1, 'payment_source_cash', 'Cash Payment Source', ''),
 (2, 'payment_source_cheque', 'Cheque Payment Source', ''),
-(3, 'time_zone', 'Time Zone', '');
+(3, 'time_zone', 'Time Zone', ''),
+(4, 'payment_target_account_id', 'Payment Target Account ID', '');
