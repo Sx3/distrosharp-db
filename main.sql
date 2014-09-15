@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.1.6
+-- version 4.1.12
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 12, 2014 at 09:06 AM
+-- Generation Time: Sep 15, 2014 at 08:04 AM
 -- Server version: 5.6.16
--- PHP Version: 5.5.9
+-- PHP Version: 5.5.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS `abilities` (
   `label` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `description` mediumtext COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=45 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=46 ;
 
 --
 -- Dumping data for table `abilities`
@@ -76,7 +76,8 @@ INSERT INTO `abilities` (`id`, `name`, `label`, `description`) VALUES
 (41, 'manage_files', 'Manage Files', ''),
 (42, 'view_stock_report', 'view_stock_report', ''),
 (43, 'view_credit_summery_report', 'View Credit Summery', ''),
-(44, 'view_sales_summary_report', 'View Sales Summary Report', ' ');
+(44, 'view_sales_summary_report', 'View Sales Summary Report', ' '),
+(45, 'view_debtor_summary_report', 'View Debtor Summary Report', '');
 
 -- --------------------------------------------------------
 
