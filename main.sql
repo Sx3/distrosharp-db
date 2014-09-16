@@ -123,4 +123,5 @@ INSERT INTO `system_settables` (`id`, `name`, `label`, `description`) VALUES
 (1, 'payment_source_cash', 'Cash Payment Source', ''),
 (2, 'payment_source_cheque', 'Cheque Payment Source', ''),
 (3, 'time_zone', 'Time Zone', ''),
-(4, 'payment_target_account_id', 'Payment Target Account ID', '');
+(4, 'payment_target_cash', 'Cash Payment Target', ''),
+(5, 'payment_target_cheque', 'Cheque Payment Target', '');
