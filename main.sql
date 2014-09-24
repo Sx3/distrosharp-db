@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 16, 2014 at 10:21 AM
+-- Generation Time: Sep 24, 2014 at 11:07 AM
 -- Server version: 5.6.19
 -- PHP Version: 5.5.9
 
@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS `abilities` (
   `label` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `description` mediumtext COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=47 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=48 ;
 
 --
 -- Dumping data for table `abilities`
@@ -78,7 +78,8 @@ INSERT INTO `abilities` (`id`, `name`, `label`, `description`) VALUES
 (43, 'view_credit_summery_report', 'View Credit Summery', ''),
 (44, 'view_sales_summary_report', 'View Sales Summary Report', ' '),
 (45, 'view_debtor_summary_report', 'View Debtor Summary Report', ''),
-(46, 'view_unload_comparison_report', 'View unload comparison report', '');
+(46, 'view_unload_comparison_report', 'View unload comparison report', ''),
+(47, 'view_age_credit_report', 'View Age Credit Report', '');
 
 -- --------------------------------------------------------
 
@@ -114,7 +115,7 @@ CREATE TABLE IF NOT EXISTS `system_settables` (
   `label` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `description` mediumtext COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=6 ;
 
 --
 -- Dumping data for table `system_settables`
