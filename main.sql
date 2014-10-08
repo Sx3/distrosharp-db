@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.1.6
+-- version 4.0.10deb1
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: Sep 26, 2014 at 07:20 AM
--- Server version: 5.6.19
--- PHP Version: 5.5.9
+-- Host: localhost
+-- Generation Time: Oct 08, 2014 at 03:49 PM
+-- Server version: 5.5.38-0ubuntu0.14.04.1
+-- PHP Version: 5.5.9-1ubuntu4.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -116,7 +116,7 @@ CREATE TABLE IF NOT EXISTS `system_settables` (
   `label` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `description` mediumtext COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=7 ;
 
 --
 -- Dumping data for table `system_settables`
@@ -127,4 +127,6 @@ INSERT INTO `system_settables` (`id`, `name`, `label`, `description`) VALUES
 (2, 'payment_source_cheque', 'Cheque Payment Source', ''),
 (3, 'time_zone', 'Time Zone', ''),
 (4, 'payment_target_cash', 'Cash Payment Target', ''),
-(5, 'payment_target_cheque', 'Cheque Payment Target', '');
+(5, 'payment_target_cheque', 'Cheque Payment Target', ''),
+(6, 'imbalance_stock', 'Imbalance Stock', '');
+
