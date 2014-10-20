@@ -3,8 +3,8 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Oct 20, 2014 at 01:22 PM
--- Server version: 5.5.40-0ubuntu0.14.04.1
+-- Generation Time: Oct 20, 2014 at 12:15 PM
+-- Server version: 5.5.38-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -80,7 +80,7 @@ INSERT INTO `abilities` (`id`, `name`, `label`, `description`) VALUES
 (45, 'view_debtor_summary_report', 'View Debtor Summary Report', ''),
 (46, 'view_unload_comparison_report', 'View unload comparison report', ''),
 (47, 'view_age_credit_report', 'View Age Credit Report', ''),
-(48, 'view_bank_account_report', 'View Bank account report', ''),
+(48, 'confirm_bank_account_balance', 'Confirm bank account balance', ''),
 (49, 'order_items', 'Order Items', 'Order items for selling invoice'),
 (50, 'view_profit_and_loss_report', 'Profit and Loss Report', 'Profit and Loss Report'),
 (51, 'view_incoming_cheques_report', 'Incoming Cheques Report', '');
