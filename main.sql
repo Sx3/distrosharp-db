@@ -3,12 +3,18 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Oct 22, 2014 at 08:32 AM
--- Server version: 5.5.40-0ubuntu0.14.04.1
+-- Generation Time: Oct 22, 2014 at 09:38 AM
+-- Server version: 5.5.38-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- Database: `d-071-1-v2`
@@ -26,7 +32,7 @@ CREATE TABLE IF NOT EXISTS `abilities` (
   `label` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `description` mediumtext COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=55 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=56 ;
 
 --
 -- Dumping data for table `abilities`
@@ -86,7 +92,8 @@ INSERT INTO `abilities` (`id`, `name`, `label`, `description`) VALUES
 (51, 'view_incoming_cheques_report', 'Incoming Cheques Report', ''),
 (52, 'view_item_sales_summary_report', 'View Item Sales Summary Report', ''),
 (53, 'view_item_sales_details_report', 'Item Sales Details', ''),
-(54, 'view_rep_finance_report', 'View Rep Finance Report', '');
+(54, 'view_rep_finance_report', 'View Rep Finance Report', ''),
+(55, 'view_item_return_report', 'Item Return Report', '');
 
 -- --------------------------------------------------------
 
@@ -138,3 +145,6 @@ INSERT INTO `system_settables` (`id`, `name`, `label`, `description`) VALUES
 (7, 'income_account', 'Income Account', ''),
 (8, 'expense_account', 'Epense Account', '');
 
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
