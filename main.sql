@@ -3,8 +3,8 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Oct 27, 2014 at 04:59 PM
--- Server version: 5.5.40-0ubuntu0.14.04.1
+-- Generation Time: Oct 27, 2014 at 05:18 PM
+-- Server version: 5.5.38-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -39,8 +39,6 @@ CREATE TABLE IF NOT EXISTS `abilities` (
 --
 
 INSERT INTO `abilities` (`id`, `name`, `label`, `description`) VALUES
-(1, 'do_it', 'Do it', 'This allows user to do it.'),
-(2, 'do_that', 'Do that', 'This allows user to do that.'),
 (3, 'view_items', 'View Items', ''),
 (4, 'add_item', 'Add Item', ''),
 (5, 'view_vendors', 'View Vendors', ''),
@@ -58,9 +56,6 @@ INSERT INTO `abilities` (`id`, `name`, `label`, `description`) VALUES
 (17, 'edit_item', 'Edit Item', ''),
 (18, 'edit_bank', 'Edit Bank', ''),
 (19, 'edit_customer', 'Edit Customer', ''),
-(20, 'view_users', 'View Users', ''),
-(21, 'add_user', 'Add User', ''),
-(22, 'edit_user', 'Edit User', ''),
 (23, 'edit_vendor', 'Edit Vendor', ''),
 (24, 'edit_route', 'Edit Route', ''),
 (25, 'edit_purchase', 'Edit Purchase', ''),
