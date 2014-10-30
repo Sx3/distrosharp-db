@@ -3,12 +3,18 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Oct 29, 2014 at 03:30 PM
--- Server version: 5.5.38-0ubuntu0.14.04.1
+-- Generation Time: Oct 30, 2014 at 09:36 AM
+-- Server version: 5.5.40-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- Database: `d-071-1-v2`
@@ -122,7 +128,7 @@ CREATE TABLE IF NOT EXISTS `system_settables` (
   `label` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `description` mediumtext COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=10 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=11 ;
 
 --
 -- Dumping data for table `system_settables`
@@ -137,5 +143,9 @@ INSERT INTO `system_settables` (`id`, `name`, `label`, `description`) VALUES
 (6, 'imbalance_stock', 'Imbalance Stock', ''),
 (7, 'income_account', 'Income Account', ''),
 (8, 'expense_account', 'Epense Account', ''),
-(9, 'main_stock', 'main_stock', '');
+(9, 'main_stock', 'main_stock', ''),
+(10, 'organization_name', 'Organization Name', '');
 
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
