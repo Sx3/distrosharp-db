@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.2.6deb1
+-- version 4.0.10deb1
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Oct 30, 2014 at 03:49 PM
--- Server version: 5.5.40-0ubuntu1
--- PHP Version: 5.5.12-2ubuntu4
+-- Generation Time: Oct 31, 2014 at 09:06 AM
+-- Server version: 5.5.38-0ubuntu0.14.04.1
+-- PHP Version: 5.5.9-1ubuntu4.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -21,10 +21,11 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `abilities` (
-`id` int(10) unsigned NOT NULL,
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `label` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `description` mediumtext COLLATE utf8_unicode_ci NOT NULL
+  `description` mediumtext COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=60 ;
 
 --
@@ -32,57 +33,57 @@ CREATE TABLE IF NOT EXISTS `abilities` (
 --
 
 INSERT INTO `abilities` (`id`, `name`, `label`, `description`) VALUES
-(3, 'view_items', 'View Items', ''),
-(4, 'add_item', 'Add Item', ''),
-(5, 'view_vendors', 'View Vendors', ''),
-(6, 'add_vendor', 'Add Vendor', ''),
-(9, 'add_route', 'Add Route', ''),
-(10, 'view_purchases', 'View Purchases', ''),
-(11, 'add_purchase', 'Add Purchase', ''),
-(12, 'add_customer', 'Add Customer', ''),
-(13, 'add_bank', 'Add Bank', ''),
-(14, 'view_routes', 'View Routes', ''),
-(15, 'view_customers', 'View Customers', ''),
-(16, 'view_banks', 'View Banks', ''),
-(17, 'edit_item', 'Edit Item', ''),
-(18, 'edit_bank', 'Edit Bank', ''),
-(19, 'edit_customer', 'Edit Customer', ''),
-(23, 'edit_vendor', 'Edit Vendor', ''),
-(24, 'edit_route', 'Edit Route', ''),
-(25, 'edit_purchase', 'Edit Purchase', ''),
-(26, 'view_transfers', 'View Transfers', ''),
-(27, 'add_transfer', 'Add Transfers', ''),
-(29, 'view_stocks', 'View Stocks', ''),
-(30, 'edit_stock', 'Edit Stock', ''),
-(31, 'view_sales', 'View Sales', ''),
-(32, 'add_sale', 'Add Sale', ''),
-(33, 'edit_sale', 'Edit Sale', ''),
-(34, 'add_finance_account', 'Add Finance account', ''),
-(35, 'view_finance_accounts', 'View Finance accounts', ''),
-(36, 'edit_finance_account', 'Edit finance account', ''),
-(37, 'add_finance_transfer', 'Add Finance transfer', ''),
-(38, 'view_finance_transfers_details', 'View finance transfers details', ''),
-(39, 'edit_finance_transfer_details', 'Edit finance transfer details', ''),
-(40, 'edit_system_settings', 'Edit System Settings', ''),
+(3, 'view_items', 'Entities,Items,View', ''),
+(4, 'add_item', 'Entities,Items,Add', ''),
+(5, 'view_vendors', 'Entities,Vendors,View', ''),
+(6, 'add_vendor', 'Entities,Vendors,Add', ''),
+(9, 'add_route', 'Entities,Routes,Add', ''),
+(10, 'view_purchases', 'Processes,Purchases,View', ''),
+(11, 'add_purchase', 'Processes,Purchases,Add', ''),
+(12, 'add_customer', 'Entities,Customers,Add', ''),
+(13, 'add_bank', 'Entities,Banks,Add', ''),
+(14, 'view_routes', 'Entities,Routes,View', ''),
+(15, 'view_customers', 'Entities,Customers,View', ''),
+(16, 'view_banks', 'Entities,Banks,View', ''),
+(17, 'edit_item', 'Entities,Items,Edit', ''),
+(18, 'edit_bank', 'Entities,Banks,Edit', ''),
+(19, 'edit_customer', 'Entities,Customers,Edit', ''),
+(23, 'edit_vendor', 'Entities,Vendors,Edit', ''),
+(24, 'edit_route', 'Entities,Routes,Edit', ''),
+(25, 'edit_purchase', 'Processes,Purchases,Edit', ''),
+(26, 'view_transfers', 'Processes,Transfers,View', '??'),
+(27, 'add_transfer', 'Processes,Transfers,Add', ''),
+(29, 'view_stocks', 'Stocks,View', ''),
+(30, 'edit_stock', 'Stocks,Edit', ''),
+(31, 'view_sales', 'Processes,Sales,View', ''),
+(32, 'add_sale', 'Processes,Sales,Add', ''),
+(33, 'edit_sale', 'Processes,Sales,Edit', ''),
+(34, 'add_finance_account', 'Finances,Accounts,Add', ''),
+(35, 'view_finance_accounts', 'Finances,Accounts,View', ''),
+(36, 'edit_finance_account', 'Finances,Accounts,Edit', ''),
+(37, 'add_finance_transfer', 'Finances,Transfers,Add', ''),
+(38, 'view_finance_transfers_details', 'Finances,Transfers,View', ''),
+(39, 'edit_finance_transfer_details', 'Finances,Transfers,Edit', ''),
+(40, 'edit_system_settings', 'System,Settings,Change', ''),
 (41, 'manage_files', 'Manage Files', ''),
-(42, 'view_stock_report', 'view_stock_report', ''),
-(43, 'view_credit_summery_report', 'View Credit Summery', ''),
-(44, 'view_sales_summary_report', 'View Sales Summary Report', ' '),
-(45, 'view_debtor_summary_report', 'View Debtor Summary Report', ''),
-(46, 'view_unload_comparison_report', 'View unload comparison report', ''),
-(47, 'view_age_credit_report', 'View Age Credit Report', ''),
-(48, 'confirm_bank_account_balance', 'Confirm bank account balance', ''),
-(49, 'order_items', 'Order Items', 'Order items for selling invoice'),
-(50, 'view_profit_and_loss_report', 'Profit and Loss Report', 'Profit and Loss Report'),
-(51, 'view_incoming_cheques_report', 'Incoming Cheques Report', ''),
-(52, 'view_item_sales_summary_report', 'View Item Sales Summary Report', ''),
-(53, 'view_item_sales_details_report', 'Item Sales Details', ''),
-(54, 'view_rep_finance_report', 'View Rep Finance Report', ''),
-(55, 'view_item_return_report', 'Item Return Report', ''),
-(56, 'view_timely_stock_report', 'View Timely Stock Report', ''),
-(57, 'confirm_stock', 'Confirm Stock', ''),
-(58, 'change_user_permissions', 'Change User Permissions', ''),
-(59, 'view_activity_log', 'Activity Log', '');
+(42, 'view_stock_report', 'Reports,View Stock Report', ''),
+(43, 'view_credit_summery_report', 'Reports,View Credit Summary Report', ''),
+(44, 'view_sales_summary_report', 'Reports,View Sales Summary Report', ' '),
+(45, 'view_debtor_summary_report', 'Reports,View Debtor Summary Report', ''),
+(46, 'view_unload_comparison_report', 'Reports,View Unload Comparison Report', ''),
+(47, 'view_age_credit_report', 'Reports,View Age Credit Report', ''),
+(48, 'confirm_bank_account_balance', 'Finances,Accounts,Confirm', ''),
+(49, 'order_items', 'Entities,Items,Order', 'Order items for selling invoice'),
+(50, 'view_profit_and_loss_report', 'Reports,View Profit and Loss Report', 'Profit and Loss Report'),
+(51, 'view_incoming_cheques_report', 'Reports,View Incoming Cheques Report', ''),
+(52, 'view_item_sales_summary_report', 'Reports,View Item Sales Summary Report', ''),
+(53, 'view_item_sales_details_report', 'Reports,View Item Sales Details Report ', ''),
+(54, 'view_rep_finance_report', 'Reports,View Rep Finance Report', ''),
+(55, 'view_item_return_report', 'Reports,View Item Return Report', ''),
+(56, 'view_timely_stock_report', 'Reports,View Timely Stock Report', ''),
+(57, 'confirm_stock', 'Stocks,Confirm', ''),
+(58, 'change_user_permissions', 'System,User Permissions,Change', ''),
+(59, 'view_activity_log', 'System,Activity Log,View', '');
 
 -- --------------------------------------------------------
 
@@ -91,10 +92,11 @@ INSERT INTO `abilities` (`id`, `name`, `label`, `description`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `stock_types` (
-`id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `label` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `description` mediumtext COLLATE utf8_unicode_ci NOT NULL
+  `description` mediumtext COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
 
 --
@@ -112,10 +114,11 @@ INSERT INTO `stock_types` (`id`, `name`, `label`, `description`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `system_settables` (
-`id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `label` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `description` mediumtext COLLATE utf8_unicode_ci NOT NULL
+  `description` mediumtext COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=11 ;
 
 --
@@ -133,45 +136,3 @@ INSERT INTO `system_settables` (`id`, `name`, `label`, `description`) VALUES
 (8, 'expense_account', 'Epense Account', ''),
 (9, 'main_stock', 'main_stock', ''),
 (10, 'organization_name', 'Organization Name', '');
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `abilities`
---
-ALTER TABLE `abilities`
- ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `stock_types`
---
-ALTER TABLE `stock_types`
- ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `system_settables`
---
-ALTER TABLE `system_settables`
- ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `abilities`
---
-ALTER TABLE `abilities`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=60;
---
--- AUTO_INCREMENT for table `stock_types`
---
-ALTER TABLE `stock_types`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
---
--- AUTO_INCREMENT for table `system_settables`
---
-ALTER TABLE `system_settables`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
