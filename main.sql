@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 21, 2014 at 12:18 PM
+-- Generation Time: Nov 24, 2014 at 11:33 AM
 -- Server version: 5.5.40-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.5
 
@@ -65,7 +65,6 @@ INSERT INTO `abilities` (`id`, `name`, `label`, `description`) VALUES
 (45, 'view_debtor_summary_report', 'Reports,View Debtor Summary Report', ''),
 (46, 'view_unload_comparison_report', 'Reports,View Unload Comparison Report', ''),
 (47, 'view_age_credit_report', 'Reports,View Age Credit Report', ''),
-(49, 'order_items', 'Entities,Items,Order', 'Order items for selling invoice'),
 (50, 'view_profit_and_loss_report', 'Reports,View Profit and Loss Report', 'Profit and Loss Report'),
 (51, 'view_incoming_cheques_report', 'Reports,View Incoming Cheques Report', ''),
 (52, 'view_item_sales_summary_report', 'Reports,View Item Sales Summary Report', ''),
@@ -154,3 +153,4 @@ CREATE TABLE IF NOT EXISTS `users` (
 
 INSERT INTO `users` (`id`, `username`, `email`, `password`, `first_name`, `last_name`, `remember_token`, `created_at`, `updated_at`) VALUES
 (999, 'sanmark', 'budhajeewa@thesanmark.com', '$2y$10$GsLTgJSY9u0p0vembfN2Y.IrpvRlIeXjH9PswmlTJL41KiWvMdV2K', 'Firstname', 'Lastname', 'P3BqQnVipDAs8wuwFPFSBAMpDG6SWU7DRj2VpznacbNDdynPZmSwVFbl2T3S', '2014-10-28 06:42:30', '2014-11-03 04:27:46');
+
