@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 15, 2014 at 01:17 PM
+-- Generation Time: Dec 15, 2014 at 03:54 PM
 -- Server version: 5.5.40-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.5
 
@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS `abilities` (
   `label` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `description` mediumtext COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=65 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=66 ;
 
 --
 -- Dumping data for table `abilities`
@@ -83,7 +83,8 @@ INSERT INTO `abilities` (`id`, `name`, `label`, `description`) VALUES
 (61, 'view_weight_calculator', 'Tool, Weight Calculator', ''),
 (62, 'add_company_returns', 'Processes,Company Returns,Add', ''),
 (63, 'view_company_returns', 'Processes,Company Returns,View', ''),
-(64, 'view_sales_report', 'Reports,View Sales', '');
+(64, 'view_sales_report', 'Reports,View Sales', ''),
+(65, 'view_purchases_report', 'Reports,View Purchases', '');
 
 -- --------------------------------------------------------
 
