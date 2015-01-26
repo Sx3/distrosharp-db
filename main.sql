@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 15, 2014 at 03:54 PM
+-- Generation Time: Jan 26, 2015 at 03:02 PM
 -- Server version: 5.5.40-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.5
 
@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS `abilities` (
   `label` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `description` mediumtext COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=66 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=67 ;
 
 --
 -- Dumping data for table `abilities`
@@ -84,7 +84,8 @@ INSERT INTO `abilities` (`id`, `name`, `label`, `description`) VALUES
 (62, 'add_company_returns', 'Processes,Company Returns,Add', ''),
 (63, 'view_company_returns', 'Processes,Company Returns,View', ''),
 (64, 'view_sales_report', 'Reports,View Sales', ''),
-(65, 'view_purchases_report', 'Reports,View Purchases', '');
+(65, 'view_purchases_report', 'Reports,View Purchases', ''),
+(66, 'view_veh_pro_pov_report', 'Reports,Veh. Pro. Mov. Report', '');
 
 -- --------------------------------------------------------
 
