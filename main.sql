@@ -85,7 +85,8 @@ INSERT INTO `abilities` (`id`, `name`, `label`, `description`) VALUES
 (63, 'view_company_returns', 'Processes,Company Returns,View', ''),
 (64, 'view_sales_report', 'Reports,View Sales', ''),
 (65, 'view_purchases_report', 'Reports,View Purchases', ''),
-(66, 'view_veh_pro_pov_report', 'Reports,Veh. Pro. Mov. Report', '');
+(66, 'view_veh_pro_pov_report', 'Reports,Veh. Pro. Mov. Report', ''),
+(67, 'add_credit', 'Processes, Sales, Credits, Add', '');
 
 -- --------------------------------------------------------
 
